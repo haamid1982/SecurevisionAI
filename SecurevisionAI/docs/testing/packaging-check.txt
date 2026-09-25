@@ -1,0 +1,65 @@
+
+> securevision-ai@0.1.0 check
+> npm run test && npm run build
+
+
+> securevision-ai@0.1.0 test
+> node --test tests/*.test.js
+
+✔ quote generator uses stored inventory prices and leaves labour for review (4.3655ms)
+✔ report generator only organises supplied job evidence (1.7075ms)
+✔ analytics SQL uses a non-keyword monthly-series alias (37.1919ms)
+✔ assistant recognises quotation requests and preserves the brief (1.5334ms)
+✔ administrator-only middleware permits administrators (0.8334ms)
+✔ administrator-only middleware rejects engineers (0.1732ms)
+✔ shared job middleware permits only declared roles (0.1587ms)
+✔ job scheduling gives PostgreSQL explicit timestamp parameter types (18.7189ms)
+✔ ordinary status changes cannot bypass the signed completion workflow (2.1677ms)
+✔ document email delivery gives PostgreSQL an explicit status parameter type (2.3626ms)
+✔ Windows PDF generation uses a project-owned writable temporary root (27.7254ms)
+✔ shared application buttons forward disabled state and additional attributes (29.8307ms)
+✔ customers and jobs do not initialise with fictional records (2.0491ms)
+✔ mobile public navigation exposes authentication links (23.8463ms)
+✔ settings only exposes functional profile, account, permissions and billing tabs (1.6404ms)
+✔ assistant quotation action carries its brief into the quote generator (1.615ms)
+✔ administrator job status keeps Completed visible and opens the completion workflow (1.5223ms)
+✔ every quotation exposes a database-backed edit workflow (1.0941ms)
+✔ customer list exposes a populated database-backed edit form (1.1852ms)
+✔ schedule shows seven days and excludes closed work (1.0649ms)
+✔ application navigation scrolls independently on short screens (1.2689ms)
+✔ public website provides privacy and reversible cookie choices (1.1316ms)
+✔ scheduling controls use visible whole-hour date and time selection (1.2945ms)
+✔ AI quotation requests require a customer and meaningful brief (2.9322ms)
+✔ quotation validation rejects negative prices and empty line items (1.2697ms)
+✔ stock movements cannot be zero (0.7041ms)
+✔ completion and AI report payloads enforce evidence limits (1.2569ms)
+✔ settings account and billing inputs reject invalid values (0.8797ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6908.5579
+
+> securevision-ai@0.1.0 build
+> vite build
+
+vite v8.1.5 building client environment for production...
+[2K
+transforming...✓ 1814 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.54 kB │ gzip:   0.32 kB
+dist/assets/index-Dma1gL65.css     76.51 kB │ gzip:  15.68 kB
+dist/assets/index-DSP-x3m8.js   1,183.16 kB │ gzip: 311.47 kB
+
+[PLUGIN_TIMINGS] Your build spent significant time in plugin `vite:css`. See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 7.39s

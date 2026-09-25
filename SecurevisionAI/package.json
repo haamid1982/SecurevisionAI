@@ -1,0 +1,35 @@
+{
+  "name": "securevision-ai",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:api": "node --watch server/server.js",
+    "dev:all": "concurrently -n WEB,API -c red,cyan \"npm:dev\" \"npm:dev:api\"",
+    "start:api": "node server/server.js",
+    "db:migrate": "node server/migrate.js",
+    "test": "node --test tests/*.test.js",
+    "check": "npm run test && npm run build",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "^10.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase": "^12.16.0",
+    "firebase-admin": "^14.2.0",
+    "helmet": "^8.3.0",
+    "lucide-react": "latest",
+    "pg": "^8.22.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "zod": "^4.4.3"
+  }
+}
